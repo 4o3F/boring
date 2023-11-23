@@ -160,7 +160,7 @@ fn get_boringssl_platform_output_path(config: &Config) -> String {
             .expect("OPT_LEVEL variable not defined in env");
 
         let subdir = match opt_env_var.to_str() {
-            Some("0") => "Debug",
+            Some("0") => "",
             Some("1" | "2" | "3") => {
                 if deb_info {
                     "RelWithDebInfo"
